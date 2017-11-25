@@ -20,7 +20,7 @@ RUN apk --no-cache add python \
     git
 
 
-RUN git clone https://github.com/shadowsocksr-backup/shadowsocksr.git && $pwd && ls -l /root/shadowsocksr/shadowsocks/
+RUN git clone https://github.com/shadowsocksr-backup/shadowsocksr.git && pwd
 
 
 WORKDIR /root/shadowsocksr/shadowsocks
