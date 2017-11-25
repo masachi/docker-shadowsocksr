@@ -16,14 +16,14 @@ ARG WORK=~
 
 RUN apk --no-cache add python \
     libsodium \
-    wget
+    wget \
+    git
 
 
-RUN mkdir -p $WORK && \
-    wget -qO- --no-check-certificate https://github.com/shadowsocksr/shadowsocksr/archive/$BRANCH.tar.gz | tar -xvf - -C $WORK
+RUN git clone https://github.com/shadowsocksr-backup/shadowsocksr.git
 
 
-WORKDIR $WORK/shadowsocksr-$BRANCH/shadowsocks
+WORKDIR $WORK/shadowsocksr/shadowsocks
 
 
 EXPOSE $SERVER_PORT
