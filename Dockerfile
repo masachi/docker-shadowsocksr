@@ -7,9 +7,10 @@ FROM alpine:3.4
 ENV SSR_URL https://github.com/shadowsocksr-backup/shadowsocksr/archive/manyuser.zip
 
 RUN set -ex \
-    && apk --update add --no-cache libsodium py-pip python-m2crypto \
+    && apk --update add --no-cache libsodium py-pip build-essential \
     && pip --no-cache-dir install $SSR_URL \
-    && rm -rf /var/cache/apk
+    && rm -rf /var/cache/apk \
+    && pip install M2Crypto
 
 ENV SERVER_ADDR 0.0.0.0
 ENV SERVER_PORT 8443
