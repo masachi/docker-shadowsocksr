@@ -23,7 +23,7 @@ RUN apk --no-cache add python \
 RUN git clone https://github.com/shadowsocksr-backup/shadowsocksr.git && pwd
 
 
-WORKDIR /root/shadowsocksr/shadowsocks
+WORKDIR /shadowsocksr/shadowsocks
 
 
 EXPOSE $SERVER_PORT
