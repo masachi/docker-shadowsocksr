@@ -14,11 +14,12 @@ ARG BRANCH=manyuser
 ARG WORK=~
 
 
-RUN apt-get install python \
+RUN apt-get update && apt-get install python \
     libsodium \
     wget \
     git \
     python-m2crypto \
+    vim \
     -y
 
 
