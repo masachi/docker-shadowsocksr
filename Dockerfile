@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM debian:jessie
 
 ENV SERVER_ADDR     0.0.0.0
 ENV SERVER_PORT     443
@@ -14,10 +14,12 @@ ARG BRANCH=manyuser
 ARG WORK=~
 
 
-RUN apk --no-cache add python \
+RUN apt-get install python \
     libsodium \
     wget \
-    git
+    git \
+    python-m2crypto \
+    -y
 
 
 RUN wget -N --no-check-certificate "https://github.com/ToyoDAdoubi/shadowsocksr/archive/manyuser.tar.gz" \
