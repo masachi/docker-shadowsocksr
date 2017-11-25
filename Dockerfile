@@ -10,7 +10,6 @@ RUN set -ex \
     && apk --update add --no-cache libsodium py-pip \
     && pip --no-cache-dir install $SSR_URL \
     && rm -rf /var/cache/apk \
-    && pip install M2Crypto --upgrade
 
 ENV SERVER_ADDR 0.0.0.0
 ENV SERVER_PORT 8443
