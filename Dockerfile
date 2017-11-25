@@ -20,11 +20,12 @@ RUN apk --no-cache add python \
     git
 
 
-RUN git clone https://github.com/shadowsocksr-backup/shadowsocksr.git && pwd
+RUN wget -N --no-check-certificate "https://github.com/ToyoDAdoubi/shadowsocksr/archive/manyuser.tar.gz" \
+    && tar -xzvf manyuser.tar.gz
 
 
 WORKDIR /shadowsocksr/shadowsocks/
 
 
 EXPOSE $SERVER_PORT
-CMD python server.py -p $SERVER_PORT -k $PASSWORD -m $METHOD -o $OBFS
+CMD python server.py -p $SERVER_PORT -k $PASSWORD -m $METHOD -O $PROTOCOL -o $OBFS -G "#10086:sizhaizhenexin,10087:fsx273819,10088:Targeral0416,10089:XGLYswf303,10090:asdqwezxc1995,10091:forever2feiyu,10092:qunshou467646,10093:13886941386,10094:kehan,10100:152212,10101:dong159*,10102:aloha1028"
