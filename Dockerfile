@@ -11,7 +11,7 @@ RUN set -ex \
     && pip --no-cache-dir install $SSR_URL \
     && rm -rf /var/cache/apk \
     && git clone https://github.com/shadowsocksr-backup/shadowsocksr.git \
-    && cd shadowsocksr/ && bash initcfg.sh && cd shadowsocks/
+    && cd shadowsocksr/ && sh initcfg.sh && cd shadowsocks/
     
 ENV SERVER_ADDR 0.0.0.0
 ENV SERVER_PORT 443
