@@ -10,7 +10,7 @@ RUN set -ex \
     && apk --update add --no-cache libsodium py-pip git\
     && pip --no-cache-dir install $SSR_URL \
     && rm -rf /var/cache/apk \
-    && git clone https://github.com/shadowsocksr/shadowsocksr.git \
+    && git clone https://github.com/shadowsocksr-backup/shadowsocksr.git \
     && cd shadowsocksr/ && bash initcfg.sh && cd shadowsocks/
     
 ENV SERVER_ADDR 0.0.0.0
