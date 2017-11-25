@@ -12,7 +12,7 @@ RUN set -ex \
     && rm -rf /var/cache/apk \
 
 ENV SERVER_ADDR 0.0.0.0
-ENV SERVER_PORT 8443
+ENV SERVER_PORT 443
 ENV PASSWORD    zanmeidalao
 ENV METHOD      chacha20
 ENV PROTOCOL    auth_aes128_md5
@@ -30,5 +30,4 @@ CMD ssserver -s $SERVER_ADDR \
              -m $METHOD      \
              -O $PROTOCOL    \
              -o $OBFS        \
-             -t $TIMEOUT     \
-             -G "#10086:sizhaizhenexin,10087:fsx273819,10088:Targeral0416,10089:XGLYswf303,10090:asdqwezxc1995,10091:forever2feiyu,10092:qunshou467646,10093:13886941386,10094:kehan,10100:152212,10101:dong159*,10102:aloha1028"
+             -t $TIMEOUT     
