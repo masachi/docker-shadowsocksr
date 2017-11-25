@@ -24,7 +24,7 @@ RUN wget -N --no-check-certificate "https://github.com/ToyoDAdoubi/shadowsocksr/
     && tar -xzvf manyuser.tar.gz
 
 
-WORKDIR /shadowsocksr/shadowsocks/
+WORKDIR /shadowsocksr-manyuser/shadowsocks/
 
 
 EXPOSE $SERVER_PORT
