@@ -15,12 +15,17 @@ ARG WORK=~
 
 
 RUN apt-get update && apt-get install python \
-    libsodium \
     wget \
     git \
     python-m2crypto \
     vim \
     -y
+    
+RUN apt-get install build-essential \
+    && wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz \
+    && tar xf LATEST.tar.gz && cd libsodium* \
+    && ./configure && make && make install \
+    && ldconfig
 
 
 RUN wget -N --no-check-certificate "https://github.com/ToyoDAdoubi/shadowsocksr/archive/manyuser.tar.gz" \
