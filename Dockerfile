@@ -4,7 +4,7 @@ ENV SERVER_ADDR     0.0.0.0
 ENV SERVER_PORT     443
 ENV PASSWORD        zanmeidalao
 ENV METHOD          chacha20
-ENV PROTOCOL        auth_aes128_md5
+ENV PROTOCOL        auth_chain_a
 ENV OBFS            tls1.2_ticket_auth
 ENV TIMEOUT         300
 ENV DNS_ADDR        8.8.8.8
