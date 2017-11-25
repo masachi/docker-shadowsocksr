@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install python \
     vim \
     -y
     
-RUN apt-get install build-essential \
+RUN apt-get install build-essential -y \
     && wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz \
     && tar xf LATEST.tar.gz && cd libsodium* \
     && ./configure && make && make install \
