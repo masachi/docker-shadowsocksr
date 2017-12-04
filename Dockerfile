@@ -2,7 +2,7 @@ FROM debian:jessie
 
 ENV SERVER_ADDR     0.0.0.0
 ENV SERVER_PORT     443
-ENV PASSWORD        zanmeidalao
+ENV PASSWORD        dalao
 ENV METHOD          chacha20
 ENV PROTOCOL        auth_chain_a
 ENV OBFS            tls1.2_ticket_auth
